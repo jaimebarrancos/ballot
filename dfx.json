@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "ballot_backend": {
+      "declarations": {
+        "node_compatibility": true
+      },
+      "main": "src/ballot_backend/main.mo",
+      "type": "motoko"
+    },
+    "ballot_frontend": {
+      "dependencies": [
+        "ballot_backend"
+      ],
+      "source": [
+        "src/ballot_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "ballot_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
